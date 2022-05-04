@@ -1,0 +1,8 @@
+jobs: 100
+use-conda: true
+conda-frontend: mamba
+use-singularity: true
+default-resources: [cpus=1, mem_mb=16000, time_min=120]
+resources: [cpus=60, mem_mb=700000]
+latency-wait: 60
+singularity-args: "--home /home/$USER:/home/$USER --bind /geomicro:/geomicro"
