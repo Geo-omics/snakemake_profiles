@@ -5,8 +5,8 @@ cluster-cancel: "scancel"
 use-conda: true
 conda-frontend: mamba
 use-singularity: true
-default-resources: [cpus=1, mem_mb=8000, time_min=120, account=gdick1, partition=standard, gpu=0]
-resources: [cpus=500, mem_mb=3500000]
+default-resources: [cpus=1, mem_mb=8000, time_min=120, account=gdick1, partition=standard, gpu=0, heavy_network=0]
+resources: [cpus=500, mem_mb=3500000, heavy_network=1]
 latency-wait: 60
 cluster-status: "slurm-status.py"
 max-status-checks-per-second: 1
