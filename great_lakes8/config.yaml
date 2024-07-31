@@ -8,7 +8,7 @@ conda-frontend: mamba
 use-conda: True
 software-deployment-method: apptainer
 use-apptainer: True
-default-resources: [cpus=1, mem_mb=8000, time_min=120, account=gdick1, partition=standard, heavy_network=0, gpu=0, disk_mb=100]
+default-resources: [cpus=1, mem_mb=8000, time_min=120, account=gdick2, partition=standard, heavy_network=0, gpu=0, disk_mb=100]
 #resources: [disk_mb=2000000]
 #resources: [cpus=20000, mem_mb=100000000, heavy_network=1, disk_mb=2000000]
 latency-wait: 30
