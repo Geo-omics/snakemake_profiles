@@ -1,7 +1,7 @@
 jobs: 1000
 local-cores: 1
 executor: cluster-generic
-cluster-generic-submit-cmd: "sbatch --parsable --time={resources.time_min} --mem={resources.mem_mb} -c {resources.cpus} -o logs/slurm/{rule}_{wildcards} -e logs/slurm/{rule}_{wildcards}"
+cluster-generic-submit-cmd: "mkdir -p logs/slurm && sbatch --parsable --time={resources.time_min} --mem={resources.mem_mb} -c {resources.cpus} -o logs/slurm/{rule}_{wildcards} -e logs/slurm/{rule}_{wildcards}"
 cluster-generic-cancel-cmd: "scancel"
 software-deployment-method: conda
 use-conda: True

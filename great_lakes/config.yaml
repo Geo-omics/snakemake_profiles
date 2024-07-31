@@ -1,6 +1,6 @@
 jobs: 1000
 local-cores: 1
-cluster: "sbatch --parsable --account={resources.account} --partition={resources.partition} --time={resources.time_min} --mem={resources.mem_mb} -c {resources.cpus} --gres=gpu:{resources.gpu} -o logs/slurm/{rule}_{wildcards} -e logs/slurm/{rule}_{wildcards}"
+cluster: "mkdir -p logs/slurm && sbatch --parsable --account={resources.account} --partition={resources.partition} --time={resources.time_min} --mem={resources.mem_mb} -c {resources.cpus} --gres=gpu:{resources.gpu} -o logs/slurm/{rule}_{wildcards} -e logs/slurm/{rule}_{wildcards}"
 cluster-cancel: "scancel"
 use-conda: true
 conda-frontend: mamba
