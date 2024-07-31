@@ -1,7 +1,7 @@
 jobs: 1000
 local-cores: 1
 executor: cluster-generic
-cluster-generic-submit-cmd: "mkdir -p logs/slurm && sbatch --parsable --time={resources.time_min} --mem={resources.mem_mb} -c {resources.cpus} -o logs/slurm/{rule}_{wildcards} -e logs/slurm/{rule}_{wildcards}"
+cluster-generic-submit-cmd: "sbatch --parsable --time={resources.time_min} --mem={resources.mem_mb} -c {resources.cpus} -o logs/slurm/{rule}_{wildcards} -e logs/slurm/{rule}_{wildcards}"
 cluster-generic-cancel-cmd: "scancel"
 software-deployment-method: conda
 use-conda: True
@@ -14,5 +14,5 @@ resources: [cpus=1000, mem_mb=1000000000, heavy_network=1, disk_mb=2000000]
 latency-wait: 10
 cluster-generic-status-cmd: "slurm-status.py"
 max-status-checks-per-second: 10
-singularity-args: "--home $HOME:/home/$USER --bind /nfs/turbo/lsa-gdick2/geomicro/data2/kiledal/"
+singularity-args: "--home $HOME:/home/$USER --bind /nfs/turbo/lsa-gdick2/"
 precommand: "mkdir -p logs/slurm/ logs/ benchmarks/"

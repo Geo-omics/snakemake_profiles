@@ -14,4 +14,4 @@ default-resources: [cpus=1, mem_mb=8000, time_min=120, account=gdick1, partition
 latency-wait: 30
 cluster-generic-status-cmd: "slurm-status.py"
 max-status-checks-per-second: 1
-singularity-args: "--home /home/$USER:/home/$USER --bind /scratch/gdick_root/ --bind /nfs/turbo/lsa-gdick2/geomicro/data2/kiledal/ --bind /gpfs/accounts/gdick_root/"
+singularity-args: "--home /home/$USER:/home/$USER --bind /scratch/gdick_root/ --bind /nfs/turbo/lsa-gdick2/ --bind /gpfs/accounts/gdick_root/"

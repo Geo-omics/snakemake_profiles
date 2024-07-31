@@ -11,4 +11,4 @@ resources: [cpus=224, mem_mb=100000000, heavy_network=1, disk_mb=2000000]
 latency-wait: 60
 cluster-status: "slurm-status.py"
 max-status-checks-per-second: 1
-singularity-args: "--home /home/$USER:/home/$USER --bind /nfs/turbo/lsa-gdick2/geomicro/data2/kiledal/"
+singularity-args: "--home /home/$USER:/home/$USER --bind /nfs/turbo/lsa-gdick2/"
